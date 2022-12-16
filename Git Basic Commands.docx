@@ -1,6 +1,19 @@
+﻿Configure the global properties of Git 
+git config --global user.name “name” 
+git config --global user.email “something@gmail.com”
+
 git init   #To initialize git repository
 
-git add filename or git add --all or git add .
+#To stage the changes
+git add filename #to stage a particular file
+git add --all git add -A #to stage all the file
+git add . #to stage the changes of current directory
+git add * #to stage all the changes but delete
+git add *.txt #to stage the all the file with .txt extension
+
+#To unstage the changes of last commit
+git reset #to reset the changes staged after last commit
+git reset --hard #to 
 
 git status #to check stash and unstash file
 
@@ -33,13 +46,14 @@ git pull  #used to Update local repository with all the changes
 
 git branch branch_name  #to create new branch
 git branch #to see the available branches
+git branch -r #to see the hidden branches of remote server
 git checkout branch_name #to move to the desired branch
 git checkout -b branch_name  #creates new branch and moves autometically to that branch
 
 #suppose now I'm in a master branch and want to merge the master branch with another branch
 git merge another_branch_name
 
-git branch -D branch_name
+git branch -D branch_name #to delete a branch 
 
 git stash #used to take the changes (which are not commited but staged) in another temporary folder 
 git stash pop #to come back to the previous step
@@ -49,6 +63,10 @@ git stash pop stash_id
 #to delete unstaged file
 git clean -f -n     #to check what files are getting removed
 git clean -f
+
+
+git remote add origin /url
+git push origin branch_name
 
 
 
