@@ -1,6 +1,10 @@
 ﻿Configure the global properties of Git 
 git config --global user.name “name” 
 git config --global user.email “something@gmail.com”
+git config ---global alias.co checkout #to create shortcut for commands
+git config ---global init.defaultBranch start #to initiate git with default
+branch
+git config –global core.editor gedit
 
 git init   #To initialize git repository
 
